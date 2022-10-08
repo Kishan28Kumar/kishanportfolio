@@ -16,7 +16,7 @@ export default function SideBar() {
     <>
     {/* <i className="fa fa-bars" aria-hidden="true"></i> */}
     {/* <i class="fa-sharp fa-solid fa-bars"></i> */}
-      <button className="ham" style={{position : 'fixed', zIndex:100, marginLeft : '.6rem'}} onClick={handleOpen} >  <i class="fa-sharp fa-solid fa-bars"></i></button>
+      <button className="ham" style={{position : 'fixed', zIndex:100, marginLeft : '.6rem'}} onClick={handleOpen} >  <i style={{cursor:"pointer"}} class="fa-sharp fa-solid fa-bars"></i></button>
       <div style={{zIndex:"100"}} className={open?"sidebar ":"sidebar sidebarGo"}>
         <div
         className="cross"

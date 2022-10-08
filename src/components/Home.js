@@ -15,8 +15,8 @@ export default function Home() {
             <div className="devInfo">
                 <div className="hello">Hi I'm</div>
                 <div className="name">Kishan Kumar</div>
-             
-                <div className="about">React Js Developer,BlockChain    <i class="fa fa-address-book-o" aria-hidden="true"></i>Enthusiast</div>
+                {/* <i class="fa fa-address-book-o" aria-hidden="true"></i> */}
+                <div className="about">React Js Developer, BlockChain    Enthusiast</div>
                 <div className="moreAbout">I am explorer,love to travel ,and like listening song</div>
                 <div className="btn">
                     <button>

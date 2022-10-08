@@ -3,25 +3,11 @@ import React from 'react'
 export default function Services() {
   return (
     <>
-        <div class="container">
-        {/* <div class="sidebar sidebarGo">
-            <nav>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/intro.html">My Intro</a></li>
-                    <li><a href="/services.html">Services</a></li>
-                    <li><a href="/blog.html">Blog</a></li>
-                    <li><a href="/contact.html">Contact me</a></li>
-                </ul>
-            </nav>
-        </div> */}
+        <div class="container">  
         <div class="main">
-            <div class="hamburger">
-                <img class="ham" src="ham2.png" alt="" width="23"/>
-                <img class="cross" src="cross1.png" alt="" width="23"/>
-            </div>
            <div class="services">
             <h1>I am a React Developer</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo ullam distinctio sequi, maiores iure quam ab accusantium sunt itaque exercitationem libero earum possimus deleniti nulla illum modi omnis cum excepturi! Tempora, sint, nesciunt consectetur maxime sequi deleniti numquam impedit, obcaecati distinctio et ipsum placeat veniam labore expedita eos repellat voluptatem!</p>
            </div>
         </div>
     </div>

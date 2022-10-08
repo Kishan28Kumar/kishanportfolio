@@ -11,19 +11,22 @@
   position: fixed;
   top: 0;
   left: 0;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+
   /* background-color: rgb(223, 219, 219); */
-  background: linear-gradient(
-    rgb(7, 251, 251),
-    rgb(178, 229, 229)
-  );
+  background-color:rgba(0,255,255,.5); 
+  backdrop-filter: blur(5px);
   background-repeat: no-repeat;
   width: 200px;
   font-family: "Fira Sans", sans-serif;
-  height: 100vh;
+  height: 95vh;
   transition: transform 0.3s ease-in;
   cursor: pointer;
 }
 body{
+  background-size: 100%;
+  min-height: 100vh;
   /* background-color: rgba(33, 231, 231,.3); */
   background: linear-gradient(
     rgba(0,255,255,.5),
@@ -36,14 +39,23 @@ body{
   padding: 30px;
 }
 
+
 .sidebar nav li {
   list-style: none;
   font-size: 20px;
   padding: 33px 0;
+  color: #000 !important;
+  font-weight: 600;
+  font-size: 20px;
+
+}
+.sidebar nav li:hover{
+  color: #fff !important;
 }
 .sidebar nav li a {
   text-decoration: none;
-  color: black;
+
+
 }
 
 /* .main { */
@@ -55,18 +67,11 @@ body{
   /* transition: transform .5s ease-in-out; */
 /* } */
 
-.container {
-  display: flex;
-}
-
 .infoContainer {
-  
+   
   min-height: 78vh;
-  margin-left: 2rem;
-  /* margin-right: 2rem; */
-
-  /* width: 80vw; */
-  /* margin: 60px auto; */
+  width: 100%;
+  /* margin-left: 30px; */
   display: flex;
   justify-content: center;
 }
@@ -74,6 +79,8 @@ body{
 .devInfo {
   font-size: 1em;
   /* font-size: 16px; */
+  width: 70%;
+  padding-left: 30px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -89,7 +96,7 @@ body{
   font-family: "Fira Sans", sans-serif;
 }
 .about {
-  font-size: 2.5em;
+  font-size: 2.5rem;
 }
 .moreAbout {
   margin-top: 10px;
@@ -138,18 +145,20 @@ body{
   transition: 0.3s ease-in-out;
 }
 .devPic{
-  width:100%;
-  flex: .5;
+  width:30%;
 }
 .devPic img {
-  /* height: 78vh; */
-  width: 300px;
+  width: 270px;
   object-fit: contain;
 }
 
 .services{
-    margin: 80px;
-    height: 70vh;
+    /* margin: 80px; */
+    /* height: 70vh; */
+    padding: 70px 20px;
+}
+.services h1{
+  font-size: 1.4rem;
 }
 
 .contactform {
@@ -167,7 +176,7 @@ body{
 .contactform h1 {
   font-family: "Source Code Pro", monospace;
   /* text-align:  center; */
-  padding: 10px 0;
+  padding: 10px 20px;
 }
 
 .contactform htmlForm div {
@@ -204,9 +213,10 @@ body{
 
 .blogcontainer {
   /* margin: 80px 88px; */
-  width: 97vw;
+  /* width: 97vw; */
   /* height:100vh; */
   /* border:2px solid black; */
+  padding: 60px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -215,8 +225,10 @@ body{
 
 .blogcontainer h1 {
   font-family: "Source Code Pro", monospace;
-  margin: 23px;
   font-weight: bold !important;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
 }
 
 .blogitem p {
@@ -232,7 +244,8 @@ p {
 }
 
 .intro {
-  margin: 80px 88px;
+  /* margin: 80px 88px; */
+  padding: 43px 15px;
 }
 
 .intro h2 {
@@ -291,13 +304,14 @@ p {
 
 .hamburger {
   position: absolute;
-  top: 10px;
+  top: 20px;
   left: 10px;
 }
 
 .ham {
   margin-left: 10px;
-  margin-left: 10px;
+  /* margin-left: 10px; */
+  /* margin-top: -75px; */
   margin-top: 10px;
 }
 .ham i{
@@ -315,36 +329,45 @@ p {
   font-size: 30px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1100px) {
+  /* .container{
+    overflow-x: unset;
+    
+  } */
   .infoContainer {
     display: flex;
+    padding-left:unset !important; 
     flex-direction: column;
     padding-top: 100px;
+    width: 100%;
+    justify-content: center !important;
+    align-items: center !important;
   }
   .devPic{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 15px;
+    width: 100%;
   }
-   .devPic > img {
+   /* .devPic > img { */
     /* height: 30rem; */
-    height: auto !important;
-    width: 375px;
     /* margin-left: -20px; */
-  }
+  /* } */
   .devInfo {
     font-size: 15px;
   }
   .btn {
     font-size: 15px;
   }
-  .intro,
+  /* .intro,
   .blogcontainer,
   .contactform {
-    margin: 50px 10px;
-  }
+    /* margin: 50px 10px; */
+  /* }  */
   .contactform htmlForm div input {
     width: 60vw;
+    padding: 0px 10px;
   }
 
   .sidebar {
@@ -365,53 +388,24 @@ p {
   transition: 0.3s ease-in-out;
 }
 }
-@media (max-width: 500px) {
-  .infoContainer {
-    display: flex;
-    flex-direction: column;
-    padding-top: 100px;
-  }
-  .devPic{
-    align-items: center;
-    justify-content: center;
-  }
-  .devPic > img {
-    height: auto !important;
-    width: 375px;
-    /* margin-left: -20px; */
-  }
-  .devInfo {
-    font-size: 10px;
-  }
-  .btn {
-    font-size: 15px;
-  }
-  .intro,
-  .blogcontainer {
-    margin: 90px 10px;
-  }
-  .contactform htmlForm div input {
-    width: 60vw;
-  }
-  .contactform {
-    margin: 90px 5px;
-  }
 
-  .sidebar {
-    width: 200px;
+@media(max-width: 600px){
+  .about{
+    font-size: 1.3rem;
   }
 }
+
 @media (max-width: 400px) {
   .infoContainer {
     display: flex;
     flex-direction: column;
     padding-top: 90px;
   }
-  .devPic > img {
-    height: auto !important;
-    width: 360px;
-    margin-left: -20px;
-  }
+  /* .devPic > img { */
+    /* height: auto !important; */
+    /* width: 360px; */
+    /* margin-left: -20px; */
+  /* } */
   .devInfo {
     font-size: 10px;
   }
@@ -419,26 +413,40 @@ p {
     font-size: 15px;
   }
   .intro,
-  .blogcontainer {
-    margin: 90px 10px;
+  .blogcontainer{
+    padding: 60px 10px;
+  }
+  .services{
+    padding: 60px 30px;
+  }
+  .contactform htmlForm{
+    padding: 0px 20px;
   }
   .contactform htmlForm div input {
     width: 60vw;
+    padding: 0px 10px;
   }
-  .contactform {
-    margin: 90px 5px;
-  }
+  /* .contactform { */
+    /* margin: 90px 5px; */
+  /* } */
 
   .sidebar {
     width: 200px;
   }
-}
-
-@media (max-width: 1300px) {
-  .devPic > img {
-    height: 33rem;
+  .about{
+    font-size: 1.5rem;
   }
 }
+
+/* @media (max-width: 1300px) { */
+  /* .devPic > img { */
+    /* height:
+    
+    
+    
+    33rem; */
+  /* } */
+/* } */
 /* @media(max-width:1400px){
     .devPic>img{
         height:36rem;
